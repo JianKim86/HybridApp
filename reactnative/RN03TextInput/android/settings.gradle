@@ -1,0 +1,3 @@
+rootProject.name = 'RN03TextInput'
+
+include ':app'

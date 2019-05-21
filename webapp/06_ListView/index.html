@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용하기 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- 스타일 작업 -->
+        <style>
+            .li_img{
+                max-height: 200px;
+                overflow: hidden;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Listview example</h2>
+            </div>
+
+            <div data-role="content">
+
+                <!-- 기본적인 리스트뷰 : 읽기전용 -->
+                <p>Read only listview</p>
+                <ul data-role="listview">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ul>
+
+                <!-- 좌우 끝까지 안가도록 인셋지정 -->
+                <hr>
+                <p>Read only listview inset</p>
+                <ul data-role="listview" data-inset="true">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ul>
+
+                <!-- ordered list -->
+                <hr>
+                <p>Read only listview inset</p>
+                <ol data-role="listview" data-inset="true">
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ol>
+
+                <!-- 클릭이 되는 리스트뷰 -->
+                <!-- Linked listview : anchor삽입 리스트뷰-->
+                <hr>
+                <p>Linked Listview</p>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="">One</a></li>
+                    <li><a href="">Two</a></li>
+                    <li><a href="">Three</a></li>
+                </ul>
+
+                <!-- 리스트뷰 구분자 -->
+                <hr>
+                <p>Divider Listview</p>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Number</li>
+                    <li><a href="">One</a></li>
+                    <li><a href="">Two</a></li>
+                    <li><a href="">Three</a></li>
+
+                    <li data-role="list-divider">Fruits</li>
+                    <li><a href="">Apple</a></li>
+                    <li><a href="">Orange</a></li>
+                    <li><a href="">Banana</a></li>
+                </ul>
+
+                <!-- 자동 구분자 리스트뷰 -->
+                <hr>
+                <p>Auto Divider Listview</p>
+                <ul data-role="listview" data-inset="true" data-autodividers="true">                    
+                    <li><a href="">One</a></li>
+                    <li><a href="">Two</a></li>
+                    <li><a href="">Three</a></li>
+                    <li><a href="">Apple</a></li>
+                    <li><a href="">Orange</a></li>
+                    <li><a href="">Banana</a></li>
+                    <li><a href="">한글</a></li>
+                    <li><a href="">한가위</a></li>
+                </ul>
+
+                <!-- 필터 텍스트를 가진 리스트뷰 -->
+                <hr>
+                <p>Filterable Listview</p>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="search item..">                    
+                    <li><a href="">One</a></li>
+                    <li><a href="">Two</a></li>
+                    <li><a href="">Three</a></li>
+                    <li><a href="">Apple</a></li>
+                    <li><a href="">Orange</a></li>
+                    <li><a href="">Banana</a></li>
+                    <li><a href="">한글</a></li>
+                    <li><a href="">한가위</a></li>
+                </ul>
+
+                <!-- 기본적으로 아이템들이 모두 보여진 상태에서 필터가 시작됨 -->
+                <!-- 아이템이 엄청 많으면 시작부터 리스트가 너무 긴 상태로 시작됨. -->
+                <!-- 거꾸로 처음에는 하나도 안보이다가 필터의 해당하는 항목만 보이도록.. -->
+                <hr>
+                <p>Filterable Listview</p>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="search item..">                    
+                    <li><a href="">One</a></li>
+                    <li><a href="">Two</a></li>
+                    <li><a href="">Three</a></li>
+                    <li><a href="">Apple</a></li>
+                    <li><a href="">Orange</a></li>
+                    <li><a href="">Banana</a></li>
+                    <li><a href="">한글</a></li>
+                    <li><a href="">한가위</a></li>
+                </ul>
+
+                <!-- 리스트의 글씨나 이미지와 상관없이 li마다 특정한 fileter text를 지정 -->
+                <hr>
+                <p> 특정 키워드 Filterable Listview</p>
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="search item..">                    
+                    <li data-filtertext="중식"><a href="">짜장면</a></li>
+                    <li data-filtertext="중식"><a href="">짬뽕</a></li>
+                    <li data-filtertext="중식"><a href="">탕수육</a></li>
+                    <li data-filtertext="일식"><a href="">초밥</a></li>
+                    <li data-filtertext="일식"><a href="">덮밥</a></li>
+                    <li data-filtertext="일식"><a href="">회</a></li>
+                    <li data-filtertext="한식"><a href="">백반</a></li>
+                    <li data-filtertext="한식"><a href="">산적</a></li>
+                    <li data-filtertext="한식"><a href="">막걸리</a></li>
+                </ul>
+
+                <hr>
+                <!-- 리스트뷰의 아이템 카운트버블 -->
+                <p>Count bubble listview</p>
+                <ul data-role="listview" data-inset="true" data-count-theme="b">
+                    <li><a href="">One <span class="ui-li-count">100</span></a></li>
+                    <li><a href="">Two <span class="ui-li-count">0</span></a></li>
+                    <li><a href="">Three <span class="ui-li-count" style="background-color: dodgerblue; border-color:dodgerblue; ">new</span></a></li>
+                </ul>
+
+                <hr>
+                <!-- 리스트뷰의 아이콘 지정 -->
+                <p>Listview icon</p>
+                <ul data-role="listview" data-inset="true">
+                    <li data-icon="delete"><a href="">delete</a></li>
+                    <li data-icon="gear"><a href="">gear</a></li>
+                    <li data-icon="info"><a href="">info</a></li>
+                    <li data-icon="false"><a href="">no icon</a></li>
+                </ul>
+
+                <!-- 커스텀 아이콘 : 이미지 아이콘 -자동 오른쪽에 배치됨 -->
+                <!-- ui-li-icon의 이미지크기는 16px*16px로 됨: 만약 이미지의 원본사이즈가 작다면 그냥 그 크기로되며 크면 16으로 scale -->
+                <hr>
+                <p>listview image icon</p>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href=""><img src="./images/moana01.jpg" class="ui-li-icon">One</a></li>
+                    <li><a href=""><img src="./images/moana02.jpg" class="ui-li-icon">Two</a></li>
+                    <li><a href=""><img src="./images/moana03.jpg" class="ui-li-icon">Three</a></li>
+                </ul>
+
+                <!-- 리스트뷰의 섬네일 이미지 -->
+                <!-- 사이즈가 80*80으로 됨 :  작은면 작은크기 그대로 크면 80으로 scale-->
+                <!-- 사이즈가 한쪽만 80에 맞추기에 이상할 수 있음. -->
+                <hr>
+                <p>listview image thumbnail</p>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href=""><img src="./images/moana01.jpg">One</a></li>
+                    <li><a href=""><img src="./images/moana02.jpg">Two</a></li>
+                    <li><a href=""><img src="./images/moana03.jpg">Three</a></li>
+                </ul>
+
+                <hr>
+                <p>listview image thumbnail</p>
+                <ul data-role="listview" data-inset="true">
+                    <li><a href=""><img src="./images/moana01.jpg" width="80" height="80">One</a></li>
+                    <li><a href=""><img src="./images/moana02.jpg" width="80" height="80">Two</a></li>
+                    <li><a href=""><img src="./images/moana03.jpg" width="80" height="80">Three</a></li>
+                </ul>
+
+                <!-- 가장보편적인 리스트아이템 모양 -->
+                <!-- 이미지1개, 텍스트 2개 -->
+                <hr>
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <a href="">
+                            <img src="./images/moana02.jpg" height="80">
+                            <h2>Moana02</h2>
+                            <p>This Movie is very good.</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <img src="./images/moana03.jpg" height="80">
+                            <h2>Moana03</h2>
+                            <p>This Movie is very good.</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <img src="./images/moana04.jpg" height="80">
+                            <h2>Moana04</h2>
+                            <p>This Movie is very good.</p>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <!-- 리스트뷰 formatted모양 설정 -->
+                <!-- <li>안에서는 h1~h6이 모두 같은 사이즈임 -->
+                <hr>
+                <p>Custom formatted listview</p>    
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Text News <span class="ui-li-count">3</span> </li>
+                    <li>
+                        <a href="">
+                            <h2>Native App Development</h2>
+                            <p><strong>Android:Java, ios:Object-c or Swift, windows:C#</strong></p>
+                            <p>It's very difficalt study that native app develmemt. but UI is very many.</p>
+                            <p class="ui-li-aside">8:42PM</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h2>Web App Development</h2>
+                            <p><strong>Jquery Mobile, Bootrap, Sencha Touch, etc...</strong></p>
+                            <p>Jquery mobile is best useful. We have to learn jquery mobile library</p>
+                            <p class="ui-li-aside">9:42PM</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h2>Hybrid App Development</h2>
+                            <p><strong>WebApp + NativeApp, PhoneGap,Cordova, ionic, react native</strong></p>
+                            <p>Hybrid App means, A WebApp be placed inside a NativeApp, So you can control function of the device.</p>
+                            <p class="ui-li-aside">10:42PM</p>
+                        </a>
+                    </li>
+
+
+                    <li data-role="list-divider">Image News <span class="ui-li-count">3</span> </li>
+                    <li>
+                        <h2>Moana 1</h2>
+                        <div class="li_img"><img src="./images/moana01.jpg" width="100%"></div>
+                        <p>Moana is very good movie.</p>
+                        <p class="ui-li-aside">3:42AM</p>
+                    </li>
+                    <li>
+                        <h2>Moana 2</h2>
+                        <div class="li_img"><img src="./images/moana02.jpg" width="100%"></div>
+                        <p>Moana is very good movie.</p>
+                        <p class="ui-li-aside">4:42AM</p>
+                    </li> 
+                    <li>
+                        <h2>Moana 3</h2>
+                        <div class="li_img"><img src="./images/moana03.jpg" width="100%"></div>
+                        <p>Moana is very good movie.</p>
+                        <p class="ui-li-aside">5:42AM</p>
+                    </li>                     
+
+                </ul>
+
+                <!-- 리스트뷰 아이템 split -->
+                <!-- 리스트 아이템하나에 2개의 이벤트를 나눌 수 있음. -->
+                <hr>
+                <p>split listview</p>
+                <ul data-role="listview" data-inset="true" data-split-icon="info">
+                    <li><a href="#page1">One</a> <a href="#pop_info" data-rel="popup"></a></li>
+                    <li><a href="">Two</a> <a href=""></a></li>
+                    <li><a href="">Three</a> <a href=""></a></li>
+                    <li><a href="">Four</a> <a href=""></a></li>
+                    <li><a href="">Five</a> <a href=""></a></li>
+                </ul>
+
+                <!-- split의 동작검사용 popup -->
+                <div data-role="popup" id="pop_info">
+                    <h2>Info 1</h2>
+                    <img src="./images/moana05.jpg" alt="">
+                    <p>this is popup window</p>
+                </div>
+
+
+                <!-- 리스트뷰의 다른 사용 용도 -->
+                <!-- Input Form 요소들을 배치하기 위한 리스트뷰 -->
+                <p>Input form listview</p>
+                <ul data-role="listview" data-inset="true">
+                    <li class="ui-field-contain">
+                        <label for="in1">input text : </label>
+                        <input type="text" id="in1">
+                    </li>
+                    <li class="ui-field-contain">
+                        <label>message : </label>
+                        <textarea></textarea>
+                    </li>
+                    <li class="ui-field-contain">
+                        <label>Do you agree? </label>
+                        <label><input type="checkbox">I agree</label>                        
+                    </li>
+                    <li class="ui-field-contain">
+                        <label>Choose your favorite fruits? </label>
+                        <fieldset data-role="controlgroup">
+                            <label><input type="checkbox">Apple</label>
+                            <label><input type="checkbox">Banana</label>
+                            <label><input type="checkbox">Orange</label>
+                        </fieldset>                        
+                    </li>
+                    <li class="ui-field-contain">
+                        <label>Slider</label>
+                        <input type="range" step="1" value="0" min="0" max="100" data-highlight="true">
+                    </li>
+                    <li class="ui-field-contain">
+                        <table style="width:100%">
+                            <tr>
+                                <td style="width:50%"><input type="submit" value="submit"></td>
+                                <td><input type="reset" value="cancel"></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+        <!-- page2 -->
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <a href="" data-rel="back">back</a>
+                <h2>PAGE2</h2>
+            </div>            
+        </div>
+    </body>
+</html>

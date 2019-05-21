@@ -1,0 +1,3 @@
+rootProject.name = 'RN16Lifecycle'
+
+include ':app'

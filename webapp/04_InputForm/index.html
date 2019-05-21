@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용하기 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Input Form</h2>
+            </div>
+
+            <div data-role="content">
+
+                <!-- JQM에서는 기본적으로 input요소들이 모두 block요소 -->
+
+                <!-- 기본 Text Input -->
+                <label for="in1">Text Input : </label>
+                <input type="text" name="" id="in1">
+
+                <!-- 입력된 글씨를 삭제해주는 clear버튼 사용 -->
+                <label for="in1">Text Input + cleaer button : </label>
+                <input type="text" name="" id="in1" data-clear-btn="true">
+
+                <!-- hint 표시하기 -->
+                <label for="in1">Text Input + cleaer button +hint: </label>
+                <input type="text" name="" id="in1" data-clear-btn="true" placeholder="input text">
+
+                <!-- ui-filed-contain과 함께 사용 -->
+                <div class="ui-field-contain">
+                    <label>Text : </label>
+                    <input type="text">
+                </div>
+
+                <!-- search 입력 폼 -->
+                <div class="ui-field-contain">
+                    <label>search : </label>
+                    <input type="search">
+                </div>
+
+                <!-- 여러줄 입력 폼 -->
+                <div class="ui-field-contain">
+                    <label>multi line : </label>
+                    <!-- rows와 cols가 모두 적용안됨, clear button도 안됨 -->
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <!-- Range입력폼 -->
+                <div class="ui-field-contain">
+                    <label>slider : </label>
+                    <input type="range" value="50" min="0" max="100" step="1">
+                </div>
+
+                <!-- Range입력폼 추가 속성 -->
+                <div class="ui-field-contain">
+                    <label>slider : </label>
+                    <input type="range" value="50" min="0" max="100" step="1" data-popup-enabled="true" data-highlight="true" data-show-value="true">
+                </div>
+
+                <!-- 이밖에 다양한 input type들 -->
+                <!-- date, datatime, tel, email, url, number, color, file[디바이스에서는 동작안함] -->
+                <!-- 파일선택 picker는 hybridapp에서 가능함. native앱 기능이 필요하므로..우리는 cordova로 할 것임 -->
+
+
+
+
+            </div>
+
+        </div>
+        
+    </body>
+</html>

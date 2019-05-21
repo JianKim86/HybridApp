@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+        
+    </head>
+
+    <body>
+
+        <!-- 페이지마다 탭이 그대로 유지되길 원한다면..page만다 탭이 제작되어 있어야함 -->
+        <!-- header에 data-id라는 속성으로 같은 이름을 지정하면됨. -->
+        <!-- *주의 : data-theme를 명시적으로 주지 않으면 theme를 계산하는 시간때문에 ui가 순간 이상하게 보임 -->
+        <div data-role="page" id="page1">
+            <div data-role="header" data-id="h" data-position="fixed" data-theme="a">
+                <h2>Page 1</h2>
+
+                <!-- navbar의 tab에 따라 page이동 -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" class="ui-btn-active ui-state-persist">page1</a></li>
+                        <li><a href="#page2" data-transition="slide">page2</a></li>
+                        <li><a href="#page3" data-transition="slide">page3</a></li>
+                        <li><a href="#page4" data-transition="slide">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content">
+                <h4>PAGE #1</h4>
+            </div>
+
+            <!-- footer : BottomNavigation -->
+            <div data-role="footer" data-position="fixed" data-id="foo" data-theme="a">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" data-icon="home" class="ui-btn-active ui-state-persist">page1</a></li>
+                        <li><a href="#page2" data-transition="slide" data-icon="star">page2</a></li>
+                        <li><a href="#page3" data-transition="slide" data-icon="gear">page3</a></li>
+                        <li><a href="#page4" data-transition="slide" data-icon="info">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="page2">
+            <div data-role="header" data-id="h" data-position="fixed" data-theme="a">
+                <h2>Page 2</h2>
+
+                <!-- navbar의 tab에 따라 page이동 -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" data-direction="reverse">page1</a></li>
+                        <li><a href="#page2" data-transition="slide" class="ui-btn-active ui-state-persist">page2</a></li>
+                        <li><a href="#page3" data-transition="slide">page3</a></li>
+                        <li><a href="#page4" data-transition="slide">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content">
+                <img src="./images/moana01.jpg" alt="moana01" width="100%">
+            </div>
+
+            <div data-role="footer" data-position="fixed" data-id="foo" data-theme="a">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" data-direction="reverse" data-icon="home">page1</a></li>
+                        <li><a href="#page2" data-transition="slide" data-icon="star" class="ui-btn-active ui-state-persist">page2</a></li>
+                        <li><a href="#page3" data-transition="slide" data-icon="gear">page3</a></li>
+                        <li><a href="#page4" data-transition="slide" data-icon="info">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="page3">
+            <div data-role="header" data-id="h" data-position="fixed" data-theme="a">
+                <h2>Page 3</h2>
+
+                <!-- navbar의 tab에 따라 page이동 -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" data-direction="reverse">page1</a></li>
+                        <li><a href="#page2" data-transition="slide" data-direction="reverse">page2</a></li>
+                        <li><a href="#page3" data-transition="slide" class="ui-btn-active ui-state-persist">page3</a></li>
+                        <li><a href="#page4" data-transition="slide">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content">
+                <img src="./images/moana02.jpg" alt="moana02" width="100%">
+            </div>
+
+            <div data-role="footer" data-position="fixed" data-id="foo" data-theme="a">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" data-direction="reverse" data-icon="home">page1</a></li>
+                        <li><a href="#page2" data-transition="slide" data-direction="reverse" data-icon="star">page2</a></li>
+                        <li><a href="#page3" data-transition="slide" data-icon="gear" class="ui-btn-active ui-state-persist">page3</a></li>
+                        <li><a href="#page4" data-transition="slide" data-icon="info">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="page4">
+            <div data-role="header" data-id="h" data-position="fixed" data-theme="a">
+                <h2>Page 4</h2>
+
+                <!-- navbar의 tab에 따라 page이동 -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" data-direction="reverse">page1</a></li>
+                        <li><a href="#page2" data-transition="slide" data-direction="reverse">page2</a></li>
+                        <li><a href="#page3" data-transition="slide" data-direction="reverse">page3</a></li>
+                        <li><a href="#page4" data-transition="slide" class="ui-btn-active ui-state-persist">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content">
+                <img src="./images/moana03.jpg" alt="moana03" width="100%">
+            </div>
+
+            <div data-role="footer" data-position="fixed" data-id="foo" data-theme="a">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="slide" data-direction="reverse" data-icon="home">page1</a></li>
+                        <li><a href="#page2" data-transition="slide" data-direction="reverse" data-icon="star">page2</a></li>
+                        <li><a href="#page3" data-transition="slide" data-direction="reverse" data-icon="gear">page3</a></li>
+                        <li><a href="#page4" data-transition="slide" data-icon="info" class="ui-btn-active ui-state-persist">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>     
+
+    </body>
+</html>

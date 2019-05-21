@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- panel 스타일 -->
+        <style>
+            /* panel의 스타일 */
+            .ui-panel{
+                /* 배경을 주려면 panel에 명시적으로  data-theme="a"이 지정되어 있어야함 */
+                background-color: bisque;
+            }
+
+            .ui-panel-inner{
+                /* border:1px dotted blue; */
+                padding: 0px 0px;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div data-role="page">
+
+            <!-- 왼쪽에서 나올 panel 마크업  -->
+            <!-- panel1 마크업 : overlay-->
+            <div data-role="panel" id="panel1" data-display="overlay" data-dismissible="false">
+                <h2>Panel 1</h2>
+                <p>display overlay</p>  
+                
+                <a href="" data-role="button" data-rel="close" data-theme="b">close</a>
+            </div>
+
+            <!-- panel2 마크업 : reveal-->
+            <div data-role="panel" id="panel2" data-display="reveal" data-dismissible="false">
+                <h2>Panel 2</h2>
+                <p>display reveal</p>  
+                
+                <a href="" data-role="button" data-rel="close" data-theme="b">close</a>
+            </div>
+
+            <!-- panel3 마크업 : push -->
+            <div data-role="panel" id="panel3" data-display="push" data-dismissible="false" data-position="right">
+                <h2>Panel 3</h2>
+                <p>display push</p>  
+                
+                <a href="" data-role="button" data-rel="close" data-theme="b">close</a>
+            </div>
+
+            <!-- panel Listview 마크업 -->
+            <div data-role="panel" id="panel4" data-display="overlay" data-theme="a">
+                <div data-role="header">
+                    <h2>Categroy</h2>
+                    <a href="" data-rel="close" data-icon="delete" data-iconpos="notext" class="ui-btn-right">close</a>
+                </div>
+
+                <div data-role="content">
+                    <ul data-role="listview">
+                        <li><a href="">woman</a></li>
+                        <li><a href="">man</a></li>
+                        <li><a href="">bag</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- 본문콘텐츠영역 -->
+            <div data-role="header">
+                <a href="#panel4" data-icon="bars" data-iconpos="notext">navNemu</a>
+                <h2>header</h2>
+            </div>
+
+            <div data-role="content">
+                <!-- 저 위에 만들 panel을 open하는 버튼 -->
+                <!-- panel이 나나타는 모양의 3종류 -->
+                <a href="#panel1" data-role="button">Overlay</a>
+                <a href="#panel2" data-role="button">Reveal</a>
+                <a href="#panel3" data-role="button">Push</a>
+            </div>
+        </div>
+        
+    </body>
+</html>

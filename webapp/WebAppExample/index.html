@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM 적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- fotorama 라이브러리 적용 : www.fotorama.io-->
+        <!-- fotorama.css & fotorama.js. -->
+        <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+
+        <!-- index.css 적용 -->
+        <link rel="stylesheet" href="./index.css">
+
+        <!-- index.js 적용 -->
+        <script src="./index.js"></script>
+
+    </head>
+    <body>
+
+        <!-- Main PAGE ////////////////// -->
+        <div data-role="page" id="main">
+            <div data-role="header" data-theme="b" id="main_logo">                
+            </div>
+
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true" data-theme="b">
+                    <li>
+                        <a href="#campus_images">
+                            <img src="./img/pic_i.png" alt="">
+                            <h3>캠퍼스 이미지</h3>
+                            <p>캠퍼스의 이미지를 둘러봅니다.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#intro">
+                            <img src="./img/intro_i.png" alt="">
+                            <h3>대학교 소개</h3>
+                            <p>가상대학교가 궁금한가요?</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./adVideo.html" rel="external">
+                            <img src="./img/movie_i.png" alt="">
+                            <h3>홍보 동영상</h3>
+                            <p>가상대학교에 대해 비디오를 시청합니다.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="campus_map.html" rel="external">
+                            <img src="./img/map_i.png" alt="">
+                            <h3>캠퍼스 맵</h3>
+                            <p>캠퍼스의 위치가 어디인가요?(지도보기)</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!-- //////////////////////////// -->
+
+
+        <!-- 캠퍼스 이미지 PAGE ///////////// -->
+        <div data-role="page" id="campus_images">
+            <div data-role="header" data-theme="b">
+                <a href="#" data-rel="back" data-icon="back">main</a>
+                <h2>캠퍼스 이미지</h2>
+            </div>
+
+            <div data-role="content">
+                <!-- 슬라이딩되는 이미지 Library사용 : fotorama -->
+                <!-- fotorama에 의해 스타일링되어 보여질 이미지들 -->
+                <div class="fotorama">
+                    <img src="./gallery/full/cb01.jpg" alt="">
+                    <img src="./gallery/full/cb02.jpg" alt="">
+                    <img src="./gallery/full/cb03.jpg" alt="">
+                    <img src="./gallery/full/cb04.jpg" alt="">
+                    <img src="./gallery/full/cb05.jpg" alt="">
+                    <img src="./gallery/full/cb06.jpg" alt="">
+                    <img src="./gallery/full/cb07.jpg" alt="">
+                    <a href="http://youtube.com/watch?v=C3lWwBslWqg">
+                        <img src="./gallery/full/cb01.jpg">
+                    </a>
+                </div>
+
+            </div>
+
+            <div data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Virtual University</h4>
+            </div>
+        </div>
+        <!-- /////////////////////////////// -->
+
+        <!-- 대학교 소개 //////////////////// -->
+        <div data-role="page" id="intro">
+            <div data-role="header" data-theme="b">
+                <a href="" data-rel="back" data-icon="back">main</a>
+                <h2>대학교 소개</h2>
+            </div>
+
+            <div data-role="content">
+                <img src="./img/univ.jpg" id="img_univ" class="small">
+
+                <h2>시대정신을 선도하는 열린 학문 공동체 입니다.</h2>
+                <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat maxime eveniet facilis nesciunt expedita fugit optio libero debitis quo neque. Neque ex commodi nesciunt aspernatur nostrum amet pariatur unde possimus.</p>
+
+                <p>총장 Luke Andrew</p>
+            </div>
+
+            <div data-role="footer">
+                <h4>Virtual University</h4>
+            </div>
+
+        </div>
+
+        <!-- //////////////////////////////// -->
+
+
+        <!-- 홍보동영상 PAGE ////////////////// -->
+        <!-- 내부링크를 사용하게되면 video요소가 dom트리에 살아있어서 음성이 계속 들림-->
+        <div data-role="page" id="video">
+            <div data-role="header" data-theme="b">
+                <a href="" data-rel="back" data-icon="back">main</a>
+                <h2>홍보 동영상</h2>
+            </div>
+
+            <div data-role="content">
+                <video controls preload="auto" poster="./img/univ.jpg">
+                    <source src="./video/virtual_university.mp4" type="video/mp4">
+                    <source src="./video/virtual_university.ogv" type="video/ogg">
+                    <source src="./video/virtual_university.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Virtual University</h4>
+            </div>
+        </div>
+        <!-- ////////////////////////////////// -->
+
+        
+        
+    </body>
+</html>

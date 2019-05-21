@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <!-- 웹앱에서는 title이 무의미 -->
+        <title></title>
+
+        <!-- 웹앱을 위한 Jquery Mobile library적용하기 -->
+        <!-- jquerymobile.com -->
+        <!-- 방법1. CDN방식 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!-- 반드시 jqueryMobile보다 jquery가 먼저 적용되어 있어야 함 -->
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+        <!-- 방법2. 다운로드방식 : 하이브리드앱은 오프라인에서도 동작을 보장해야 하므로 이 방법을 권장! -->
+        <!-- 적용순서 중요 -->
+        <link rel="stylesheet" href="./jquery.mobile-1.4.5.min.css">
+        <script src="./jquery.min.js"></script>
+        <script src="./jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- 뷰포트 설정 [하이브리드에서는 필수]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <!-- 모바일 화면의 한 페이지(화면) 만들기 [마치 안드로이드의 Activity와 비슷]-->
+        <div data-role="page" id="page1">
+            <!-- 하나의 페이지는 3개의 영역으로 구분 :원하는 부분만 사용해도 됨 -->
+            <!-- 1. Header영역 ( AppBar의 역할 ) -->
+            <div data-role="header">
+                <!-- 페이지의 제목 지정-->
+                <!-- data-role="header"안에서는 h1~h6이 모두 같은 사이즈임 : 시멘틱 태그를 반영하기 위해 가급적 h2정도의 중요도를 가진 태그 사용 -->
+                <h1>This is Header Region</h1>
+            </div>
+
+            <!-- 2. Content영역 : 페이지의 내용물영역 -->
+            <div data-role="content">
+                <p>This is Content Region.</p>  
+                
+                <!-- id="page2"인 페이지로 이동 -->
+                <!-- <a>링크요소 이용 -->
+                <!-- a요소가 버튼처럼 보이도록 JM의 css적용 -->
+                <a href="#page2" data-role="button" style="background-color: indigo; color: white;">Go to page2</a>
+            </div>
+
+            <!-- 3. Footer 영역 (웹에서는 서비스제공자에 대한 정보, 앱에서는 Bottom Navigation용 ) -->
+            <div data-role="footer">
+                <!-- h1~h6이 모두 같은 사이즈 -->
+                <!-- 시멘틱을 반영하기 위해 보통 h4정도 사용 -->
+                <h4>This is Footer Region</h4>
+            </div>
+        </div>
+
+        <!-- 하나의 HTML문서 안에 여래개의 page작성 가능 [한번의 하나의 page만 보여짐]-->
+        <div data-role="page" id="page2">
+            <div data-role="header" data-theme="b">
+                <h2>Second Page Header</h2>
+                <!-- header안에 아이콘버튼 2개까지 가능 -->
+                <!-- 첫번째 것은 왼쪽에 배치 -->
+                <a href="#page1" data-icon="back">back</a>
+
+                <!-- 두번째 것은 오른쪽에 자동 배치 -->
+                <a href="#" data-icon="grid" data-iconpos="notext">menu</a>
+            </div>
+
+            <div data-role="content">
+                <p>This is Second Page.</p>
+
+                <!-- id="page1"로 되돌아 가능 버튼 -->
+                <a href="#page1" data-role="button" data-theme="b">Go back to page1</a>
+
+                <!-- page3.html(외부문서)로 링크하기 -->
+                <!-- 외부문서링크는 ajax기술이 요구되므로 실행이 http://주소로 되어야만 실행가능함 [그냥되는 브라우저도 있음 : firefox나 MS IE or Edge]-->
+                <!-- 안드로이드의 웹뷰는 간단한 설정으로 ajax실행 가능하므로..이렇게 외부문서로 페이지를 만드는 것도 잘 사용됨 -->
+                <a href="page3.html" data-role="button" data-transition="slide">Go to page3</a>
+                <!-- 페이지전환 효과 data-transition는 ajax기술을 적용될 때만 가능함 -->
+
+                <!-- ajax기술 안쓰고 그냥 page3.html을 열기!! [rel속성 지정] -->
+                <a href="page3.html" data-role="button" rel="external" data-transition="slide">Go to page3 by external</a>
+
+            </div>
+
+            <!-- footer를 아래쪽에 고정시키기 -->
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <h4>Footer</h4>
+            </div>
+        </div>
+        
+    </body>
+</html>

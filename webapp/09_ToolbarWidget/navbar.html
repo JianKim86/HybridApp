@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Jquery Mobile Library추가 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+        
+    </head>
+
+    <body>
+        
+        <div data-role="page">
+            <!-- header안에 navar 배치 -->
+            <!-- 안드로이드의 TabLayout같은 모양 -->
+            <!-- header에 테마주면 navbar도 영향받음 -->
+            <div data-role="header" data-theme="b">
+                <h2>Header Tab</h2>
+                <a href="" data-icon="grid" class="ui-btn-right" data-theme="a">option</a>
+
+                <!-- navbar in header bar -->
+                <!-- like. TabLayout -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="" class="ui-btn-active">tab1</a></li>
+                        <li><a href="">tab2</a></li>
+                        <li><a href="">tab3</a></li>
+                        <li><a href="" data-theme="a">tab4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content">
+                <!-- navbar는 content에서 사용해도됨 -->
+                
+                <label>Basic navbar</label>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="">One</a></li>
+                    </ul>
+                </div>
+
+                <!-- 기본 navbar는 2~5개 -->
+                <label>basic navbar 2~5</label>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="">One</a></li>
+                        <li><a href="">Two</a></li>
+                        <li><a href="">Three</a></li>
+                        <li><a href="">Four</a></li>
+                        <li><a href="">Five</a></li>
+                    </ul>
+                </div>
+
+                <!-- 6개이상이면 옆으로 배치가 너무 좁아서 -->
+                <!-- 옆으로 2개씩 아래로 배치됨 -->
+                <label>basic navbar 10개</label>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="" class="ui-btn-active">One</a></li>
+                        <li><a href="">Two</a></li>
+                        <li><a href="">Three</a></li>
+                        <li><a href="">Four</a></li>
+                        <li><a href="">Five</a></li>
+                        <li><a href="">Six</a></li>
+                        <li><a href="">Seven</a></li>
+                        <li><a href="">Eight</a></li>
+                        <li><a href="">Nice</a></li>
+                        <li><a href="">Ten</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- nabvar in footer -->
+            <!-- 안드로이드의  BottomNavigationView와 비슷 -->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="" data-icon="grid">Summary</a></li>
+                        <li><a href="" data-icon="star">Favs</a></li>
+                        <li><a href="" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>            
+
+    </body>
+</html>

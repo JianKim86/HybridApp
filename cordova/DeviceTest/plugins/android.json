@@ -1,0 +1,33 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mrhi.devicetest"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.mrhi.devicetest"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.mrhi.devicetest"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.mrhi.devicetest"
+    },
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.mrhi.devicetest"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.mrhi.devicetest"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.mrhi.devicetest"
+    }
+  },
+  "dependent_plugins": {}
+}

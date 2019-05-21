@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+
+        <!-- 스타일작업 -->
+        <style>
+            /* PAGE2의 스타일 */
+            #tabs{
+                width: 30%;
+                display: inline-block;
+            }
+
+            #tab4, #tab5, #tab6{
+                width: 60%;
+                display: inline-block;
+                margin-left: 5%;
+                vertical-align: top;
+            }
+        </style>
+       
+    </head>
+
+    <body>
+
+        <!-- PAGE#1 -->
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <h2>navbar tabs</h2>
+                <a href="#page2" data-icon="carat-r" data-iconpos="right" class="ui-btn-right" data-theme="b">page2</a>
+            </div>
+
+            <div data-role="content">
+                <!-- 탭 구성 : 안드로이드의 TabHost위젯같은 것-->
+                <div data-role="tabs">
+                    <!-- 1. 탭버튼 영역 : tabWidet-->
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#tab1">tab1</a></li>
+                            <li><a href="#tab2">tab2</a></li>
+                            <li><a href="#tab3">tab3</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. 각 탭에 따른 콘텐츠 영역 : tabContent-->
+                    <!-- 탭1의 content -->
+                    <div id="tab1">
+                        <h4>TAB 1 Fragment</h4>
+                        <p>tab 1 fragment region.</p>
+                    </div>
+
+                    <!-- 탭2의 content -->
+                    <div id="tab2">
+                        <img src="./images/moana03.jpg" width="100%">
+                    </div>
+
+                    <!-- 탭3의 content -->
+                    <ul id="tab3" data-role="listview" data-inset="true">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- PAGE#2 -->
+        <div data-role="page" id="page2">
+
+            <div data-role="header">
+                <a href="" data-rel="back" data-icon="back">back</a>
+                <h2>vertical tabs</h2>
+            </div>
+
+            <div data-role="content">
+
+                <div data-role="tabs">
+
+                    <!-- 탭버튼 구성 -->
+                    <!-- navbar는 가로만 가능함 -->
+                    <ul data-role="listview" data-inset="true" id="tabs">
+                        <li><a href="#tab4">tab1</a></li>
+                        <li><a href="#tab5">tab2</a></li>
+                        <li><a href="#tab6">tab3</a></li>
+                    </ul>
+
+                    <!-- 2. 각 탭에 따른 콘텐츠 영역 : tabContent-->
+                    <!-- 탭1의 content -->
+                    <div id="tab4">
+                        <h4>TAB 1 Fragment</h4>
+                        <p>tab 1 fragment region.</p>
+                    </div>
+
+                    <!-- 탭2의 content -->
+                    <div id="tab5">
+                        <img src="./images/moana03.jpg" width="100%">
+                    </div>
+
+                    <!-- 탭3의 content -->
+                    <ul id="tab6" data-role="listview" data-inset="true">
+                        <li>One</li>
+                        <li>Two</li>
+                        <li>Three</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

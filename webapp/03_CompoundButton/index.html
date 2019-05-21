@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <!-- JQM적용하기 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <script>
+            function clickBtn1(){
+                // 1. Javascript로 처리하기
+                // var cb1= document.getElementById('cb1');
+                // var cb2= document.getElementById('cb2');
+                // var cb3= document.getElementById('cb3');
+
+                // var value="";
+                // if(cb1.checked) value += cb1.value+"\n";
+                // if(cb2.checked) value += cb2.value+"\n";
+                // if(cb3.checked) value += cb3.value;
+
+                // alert(value);
+
+                //2. jquery로 
+                var values="";
+                $('input[type=checkbox]:checked').each( function(index){
+                    values += index+" : "+ $(this).val()+"\n";
+                });
+
+                alert(values);
+
+            }
+
+            function clickBtn2(){
+                var value= $('input[name=rg1]:checked').val();
+                alert(value);
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Compound Button</h2>
+            </div>
+
+            <div data-role="content">
+
+                <!-- checkbox 버튼 check상태 확인 -->
+                <fieldset data-role="controlgroup">
+                    <input type="checkbox" name="cb1" id="cb1" value="one">
+                    <label for="cb1">ONE</label>
+
+                    <input type="checkbox" name="cb2" id="cb2" value="two">
+                    <label for="cb2">TWO</label>
+
+                    <input type="checkbox" name="cb3" id="cb3" value="three">
+                    <label for="cb3">THREE</label>
+                </fieldset>
+                <button onclick="clickBtn1()">Check</button>
+
+                <!-- radio버튼 check상태 확인 -->
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Choose payment method : </legend>
+
+                        <input type="radio" name="rg1" id="rb1" value="credit" checked>
+                        <label for="rb1">Credit</label>
+
+                        <input type="radio" name="rg1" id="rb2" value="debit">
+                        <label for="rb2">Debit</label>
+
+                        <input type="radio" name="rg1" id="rb3" value="cash">
+                        <label for="rb3">Cash</label>
+                    </fieldset>
+                    <button onclick="clickBtn2()">check</button>
+
+                </div>  
+                
+                <hr>
+                <!-- flipswitch -->
+                <label for="fs">터보기능</label>
+                <input type="checkbox" data-role="flipswitch" id="fs" data-on-text="켜짐" data-off-text="꺼짐">
+                
+                <!-- label안에 input넣으면 동작 이상해짐 -->
+                <label>터보기능<input type="checkbox" data-role="flipswitch" id="fs" data-on-text="켜짐" data-off-text="꺼짐"></label>
+                
+                
+
+            </div>
+
+        </div>
+        
+    </body>
+</html>

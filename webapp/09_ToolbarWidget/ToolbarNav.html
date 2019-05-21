@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+        
+    </head>
+
+    <body>
+
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <h2>Page 1</h2>
+
+                <!-- navbar의 tab에 따라 page이동 -->
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" class="ui-btn-active">page1</a></li>
+                        <li><a href="#page2">page2</a></li>
+                        <li><a href="#page3">page3</a></li>
+                        <li><a href="#page4">page4</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="content">
+                <h4>PAGE #1</h4>
+            </div>
+
+        </div>
+
+
+
+        <div data-role="page" id="page2">
+            <div data-role="header" data-add-back-btn="true">
+                <h2>Page 2</h2>
+            </div>
+
+            <div data-role="content">
+                <img src="./images/moana01.jpg" alt="moana01" width="100%">
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="page3">
+            <div data-role="header" data-add-back-btn="true">
+                <h2>Page 3</h2>
+            </div>
+
+            <div data-role="content">
+                <img src="./images/moana02.jpg" alt="moana02" width="100%">
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="page4">
+            <div data-role="header" data-add-back-btn="true">
+                <h2>Page 4</h2>
+            </div>
+
+            <div data-role="content">
+                <img src="./images/moana03.jpg" alt="moana03" width="100%">
+            </div>
+        </div>     
+
+    </body>
+</html>

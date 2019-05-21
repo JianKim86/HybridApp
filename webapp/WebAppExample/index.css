@@ -1,0 +1,30 @@
+/* Main page LOGO 이미지 */
+#main_logo{
+    height: 160px;
+
+    background-image: url("./img/CI_TITLE.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 대학소개 페이지 */
+#img_univ{
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5%;    
+
+    transition-property: width;
+    transition-duration: 500ms;
+}
+
+.small{
+    width:30%;
+}
+
+.large{
+    width:100%;
+}
+
+.clear{
+    clear: both;
+}

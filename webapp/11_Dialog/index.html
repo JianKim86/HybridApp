@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+
+        <!-- 스타일 -->
+        <style>
+            /* 액션시트모양 만들기 위한 스타일 */
+            #dialog3 .ui-dialog-contain{
+                margin-top: 0;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div data-role="page" id="index">
+            <div data-role="header">
+                <h2>Dialog Test</h2>
+            </div>
+
+            <div data-role="content">
+
+                <!-- 일반 page전환 하듯이 만듦 -->
+                <!-- 일반 page를 dialog로 열리게끔[ data-rel="dialog" ]  -->
+                <a href="#page1" data-role="button" data-rel="dialog">Page 1</a>
+
+                <!-- 아예 dialog로 만들어지 페이지를 열기 -->
+                <!-- [ data-rel="dialog" ]필요없음 -->
+                <a href="#dialog1" data-role="button">Dialog 1</a>
+
+                <!-- 전화효과 줄수 있음. -->
+                <a href="#dialog1" data-role="button" data-transition="slidedown">Dialog 1</a>
+                <a href="#dialog1" data-role="button" data-transition="flow">Dialog 1</a>
+
+                <!-- dialog 2열기 -->
+                <a href="#dialog2" data-role="button">Dialog 2</a>
+
+                <!-- actionsheet 열기 -->
+                <a href="#dialog3" data-role="button" data-transition="slidedown">ActionSheet</a>
+
+            </div>
+
+        </div>
+
+        <!-- PAGE 1 -->
+        <div data-role="page" id="page1">
+            <div data-role="header" data-theme="b">
+                <h2>page 1</h2>
+            </div>
+
+            <div class="ui-content">
+                <h2>This is page1</h2>
+                <a href="" data-role="button">button</a> 
+            </div>
+        </div>
+
+        <!-- 원래 Dialog로 만들기 -->
+        <!-- data-role="dialog" -->
+        <div data-role="dialog" id="dialog1">
+            <div data-role="header" data-theme="b">
+                <h2>Dialog 1</h2>
+            </div>
+
+            <div class="ui-content">
+                <h2>This is Dialog1</h2>
+                <a href="" data-role="button">button</a> 
+            </div>
+        </div>
+
+
+        <div data-role="dialog" id="dialog2" data-corners="false" data-close-btn="right">
+            <div data-role="header" data-theme="b">
+                <h2>Dialog 2</h2>
+            </div>
+
+            <div class="ui-content">
+                <h2>This is Dialog2</h2>
+                <a href="" data-role="button">button</a> 
+            </div>
+        </div>
+
+        <!-- actionsheet dialog -->
+        <div data-role="dialog" id="dialog3">
+            
+            <div class="ui-content">
+                <h2>This is ActionSheet</h2>
+                <p>style sheet</p>
+
+                <a href="#index" data-role="button">button</a>
+            </div>
+
+        </div>
+
+
+    </body>
+</html>

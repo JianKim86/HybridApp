@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Jquery Mobile Library추가 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+
+        <!-- 스타일 -->
+        <style>
+            /* data-role="header"인 요소선택을 클래스선택자로 해야함 */
+            .ui-header#aa{
+                background-color: greenyellow;
+                background-image: url("images/enemy_a_03.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 300px;                
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div data-role="page">
+            <!-- header역할 : Toolbar역할 -->
+            <div data-role="header">
+                <!-- 제목줄영역에서 제목표시는 <h>태그를 권장(자동 가운데 정렬), p, label, legend 은 모두 왼쪽으로 배치됨 -->
+                <!-- h1~h6의 글씨사이즈에 차이가 없음. -->
+                <h2>Header Title</h2>
+            </div>
+            <br>
+
+            <!-- Header영역안에 버튼 삽입 -->
+            <div data-role="header">
+                <h2>Header Button</h2>
+
+                <!-- header안에 있는 <a>태그는 별도의 속성없이도 toolbar의 아이콘버튼으로 만들어짐 -->
+                <!-- 버튼은 2개까지가 기본 : 첫번째는 left위치, 두번째 right위치  -->
+                <!-- header영역안에서의 버튼은 인라인요소임 -->
+                <!-- <a href="">home</a>
+                <a href="">menu</a> -->
+
+                <!-- 버튼에 아이콘 설정 및 아이콘위치-->
+                <!-- iconpos로 top,bottom이 가능하지만 제목영역을 벗어남으로 가급적 사용을 권장하지 않음. -->
+                <a href="" data-icon="home" data-iconpos="notext">home</a>
+                <a href="" data-icon="gear" data-iconpos="right">menu</a>
+
+                <!-- header안에서 아이콘버튼으로 <input>은 사용되지 못함 -->              
+            </div>
+            <br>
+
+            <!-- 아이콘버튼의 위치를 직접 지정 -->
+            <div data-role="header">
+                <h2>Header Button 위치 지정</h2>
+
+                <!-- 첫번째 버튼은 무조건 left에 배치됨 -->
+                <!-- .ui-btn-right를 통해서 오른쪽으로 배치 가능 -->
+                <a href="" class="ui-btn-right">menu</a>
+
+                <!-- 그냥 두번째 버튼을 배치하면 다음줄에 배치됨 -->
+                <a href="" class="ui-btn-left">home</a>
+            </div>
+            <br>
+
+            <!-- 3개 이상의 버튼 배치하면? -->
+            <div data-role="header" id="aa">
+                <h3>3개 이상의 버튼 header</h3>
+
+                <a href="">home</a>
+                <a href="">menu</a>
+
+                <!-- 3개이상 부터는 제목 테그스트 다음 줄에 inline요소로서 배치됨 -->
+                <!-- <h>제목과 버튼2개를 제외한 나머지는 제목글씨 다음줄에 배치되어 자유롭게 구성 가능 -->
+                <!-- style을 통해 버튼을 block요소로 바꿀 수도 있음. -->
+                <a href="" style="display:block">one</a>
+                <a href="">two</a>
+                <a href="">three</a>
+                <a href="">four</a>
+            </div>
+            <br>
+
+            <!-- header에 theme -->
+            <!-- header에 테마를 주면 안에 있는 아이콘버튼도 영향미침 -->
+            <div data-role="header" data-theme="b">
+                <h2>header theme</h2>
+
+                <!-- 아이콘버튼만 별도로 테마지정가능 -->
+                <a href="">home</a>
+                <a href="" data-theme="a">menu</a>
+            </div>
+
+            <!-- Header 위치 고정 -->
+            <!-- <div data-role="header" data-position="fixed">
+                <h2>Header Position Fixed</h2>
+            </div> -->
+
+            <!-- fullscreen Header -->
+            <!-- fullscreen은 반드시 data-position="fixed"가 되어 있어야만 가능함 -->
+            <div data-role="header" data-position="fixed" data-fullscreen="true" data-theme="b">
+                <h2>Header Position Fixed Fullscreen</h2>
+            </div>
+
+            <!-- Custom Header 만들기 -->
+            <hr>
+            <div data-role="header">
+                <h2></h2>
+
+                <button data-icon="home" data-theme="b">home</button>
+                <button data-icon="grid">menu</button>
+
+                <!-- 제목줄안에 일반적인 요소들을 배치해되 됨 -->
+                <!-- 그냥 바로 요소들 배치하면 padding이 없어서 다소 안이쁨 -->
+                <div style="padding:0px 16px">
+                    <input type="search">
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <a href="" data-role="button">page1</a>
+                        <a href="" data-role="button">page2</a>
+                        <a href="" data-role="button">page3</a>
+                        <a href="" data-role="button">page4</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div data-role="content">
+                <h3>This region is content area</h3>
+                <h6>this is simple h6</h6>
+                <a href="" data-role="button">anchor button</a>
+            </div>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <!-- JQM적용하기 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Checkbox Button</h2>
+            </div>
+
+            <div data-role="content">
+                <!-- 기본적인 checkbox버튼 -->
+
+                <!-- label요소의 for속성을 이용한 체크박스 -->
+                <!-- 기본 block요소가 됨 -->
+                <input type="checkbox" id="cb1" name="cb1">
+                <label for="cb1">checkbox1</label>
+
+                <!-- label요소 안에 input요소 삽입 -->
+                <label><input type="checkbox">checkbox2</label>
+
+                <!-- 여러개의 checkbox버튼을 하나의 그룹으로 묶기 -->
+                <fieldset data-role="controlgroup">
+                    <label><input type="checkbox">One</label>
+                    <label><input type="checkbox">Two</label>
+                    <label><input type="checkbox">Three</label>
+                </fieldset>
+
+                <!-- Horizontal group(수평으로 그룹핑) -->
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <label><input type="checkbox">One</label>
+                    <label><input type="checkbox">Two</label>
+                    <label><input type="checkbox">Three</label>
+                </fieldset>
+
+                <!-- 체크박스의 위치를 변경 -->
+                <label for="cb3">right checkbox</label>
+                <input type="checkbox" id="cb3" name="cb3" data-iconpos="right">
+
+                <!-- 그룹으로 있을 때 아이콘 위치지정 -->
+                <!-- 개별 input에 설정하지 말고 그룹에 한번에 위치지정 -->
+                <fieldset data-role="controlgroup" data-iconpos="right">
+                    <label><input type="checkbox">One</label>
+                    <label><input type="checkbox">Two</label>
+                    <label><input type="checkbox">Three</label>
+                </fieldset>
+
+                <!-- 테마적용 가능 : a,b -->
+                <fieldset data-role="controlgroup" data-theme="b" data-iconpos="right">
+                    <label><input type="checkbox">One</label>
+                    <label><input type="checkbox" data-theme="a">Two</label>
+                    <label><input type="checkbox">Three</label>
+                </fieldset>
+
+                <!-- 보통 컨트롤박스를 만들면 범례표시를 붙임. -->
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup" data-iconpos="right">
+                        <!-- 범례표시 -->
+                        <legend>Choose your favorite fruits</legend>
+
+                        <label><input type="checkbox">Orange</label>
+                        <label><input type="checkbox">Banana</label>
+                        <label><input type="checkbox">Apple</label>
+                    </fieldset>
+                </div>
+
+                <!-- 컨트롤 그룹이 아닐때도 많이 사용됨 -->
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Agree to the terms : </legend>
+                        <label><input type="checkbox">I agree</label>
+                    </fieldset>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+        
+    </body>
+</html>

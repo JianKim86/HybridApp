@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용하기 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <script>
+            // $(document).ready( function(){
+            //     $('#b1').click(function(){
+            //         var val= $('#select1 option:selected').val();
+            //         alert( val );
+            //     })                
+            // });
+
+            // jquery의 이벤트등록시 on을 사용하면..
+            // ready없이 등록 가능함
+            // 즉, 아직 만들어지지 않은 요소에도 이벤트 등록이 가능함
+            $(document).on('click', '#b1', function(){
+                var val= $('#select1 option:selected').val();
+                alert( val );
+            });
+            
+        </script>
+    </head>
+
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <h2>select example</h2>
+            </div>
+
+            <div data-role="content">
+
+                <!-- 기본 select메뉴 : block요소 -->
+                <select>
+                    <option value="">aaa</option>
+                    <option value="">bbb</option>
+                    <option value="">ccc</option>
+                </select>
+
+                <!-- 아이콘 모양, 위치 -->
+                <select data-icon="gear" data-iconpos="left">
+                    <option value="">aaa</option>
+                    <option value="">bbb</option>
+                    <option value="">ccc</option>
+                </select>
+
+                <!-- 인라인 설정 -->
+                <select data-inline="true">
+                    <option value="">aaa</option>
+                    <option value="">bbb</option>
+                    <option value="">ccc</option>
+                </select>
+
+                <select data-inline="true">
+                    <option value="">홍길동</option>
+                    <option value="">문재인</option>
+                    <option value="">유시민</option>
+                </select>
+
+                <!-- 옵션중 하나 미리 선택 -->
+                <select>
+                    <option value="">aaa</option>
+                    <option value="" selected>bbb</option>
+                    <option value="">ccc</option>
+                </select>
+
+                <!-- 옵션중 하나 disabled -->
+                <select>
+                    <option value="">aaa</option>
+                    <option value="" disabled>bbb</option>
+                    <option value="">ccc</option>
+                </select>
+
+                <!-- 옵션 그룹나누기 -->
+                <select name="" id="">
+                    <option>Choose..</option>
+                    <optgroup label="English">
+                        <option value="">aaa</option>
+                        <option value="">bbb</option>
+                        <option value="">ccc</option>
+                    </optgroup>
+                    <optgroup label="한글">
+                        <option value="">가나다</option>
+                        <option value="">마바사</option>
+                    </optgroup>
+                </select>
+
+                <!-- Select를 그룹핑하기 -->
+                <fieldset data-role="controlgroup">
+                    <legend>Choose Menus</legend>
+
+                    <select>
+                        <option value="">aaa</option>
+                        <option value="">bbb</option>
+                        <option value="">ccc</option>
+                    </select>
+
+                    <select>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+
+                    <select>
+                        <option value="">홍길동</option>
+                        <option value="">홍준표</option>
+                        <option value="">유승민</option>
+                    </select>
+
+                </fieldset>
+
+                <!-- 기본 select는 web에서 보기 적합하도록 dropdown모양으로 옵션이 보여짐 -->
+                <!-- 모바일에서는 popup처럼 메뉴가 보이는 것이 더 좋음 -->
+                <select data-native-menu="false">
+                    <option value="">aaa</option>
+                    <option value="">bbb</option>
+                    <option value="">ccc</option>
+                </select>
+
+                <!-- popup은 기본적으로 첫번째 option이 제목이 됨 -->
+                <select data-native-menu="false">
+                    <option>Choose Menu</option>
+                    <option value="a">aaa</option>
+                    <option value="b">bbb</option>
+                    <option value="c">ccc</option>
+                </select>
+
+                <!-- 옵션의 개수가 많으면 자동으로 스크롤이 가능한 Dialog모양이 됨 -->
+                <!-- 브라우저마다 좀 다름..실 디바이스에서 됨 -->
+                <select>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                    <option value="a">aaa</option>
+                </select>
+
+                <!-- 옵션 테마 -->
+                <select data-theme="b" data-native-menu="false">
+                    <option value="a">aaa</option>
+                    <option value="b">bbb</option>
+                    <option value="c">ccc</option>
+                </select>
+
+                <!-- 멀티 체크 옵션메뉴 -->
+                <select data-theme="b" data-native-menu="false" multiple>
+                    <option value="a">aaa</option>
+                    <option value="b">bbb</option>
+                    <option value="c">ccc</option>
+                </select>
+
+                <!-- 선택된 것 알아내기 -->
+                <select data-theme="b" data-native-menu="false" id="select1">
+                    <option value="a">aaa</option>
+                    <option value="b">bbb</option>
+                    <option value="c">ccc</option>
+                </select>
+                <button id="b1">OK</button>
+
+            </div>
+        </div>
+    </body>
+</html>

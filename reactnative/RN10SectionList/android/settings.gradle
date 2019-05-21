@@ -1,0 +1,3 @@
+rootProject.name = 'RN10SectionList'
+
+include ':app'

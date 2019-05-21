@@ -1,0 +1,3 @@
+rootProject.name = 'RN06CustomComponent'
+
+include ':app'

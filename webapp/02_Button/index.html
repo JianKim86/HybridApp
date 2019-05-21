@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM 라이브러리 적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <script>
+            function clickBtn(){
+                alert('clicked button');
+            }
+
+            function clickBtn2(msg){
+                alert('clicked button : '+msg);
+            }
+
+            function clickBtn3(num){
+                alert('clicked button : '+num);
+            }
+
+            // img01요소를 찾아와서 onclick이벤트 처리
+            // Javascript를 이용하는 방법
+            window.onload= function(){
+                var img01= document.getElementById('img01');
+                img01.addEventListener('click' , function(){
+                    alert("img01 clicked!!!");
+                });
+            }
+
+            // Jquery에서는 이벤트처리가 더 쉬움
+            $(document).ready(function(){
+                // 요소를 찾은 때 css의 선택자를 이용할 수 있음.
+                $('#img02').click(function(){
+                    alert("img02 clicked!!");
+                });
+            });
+
+            
+        </script>
+
+    </head>
+
+    <body>
+        
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Button Widget</h2>
+            </div>
+
+            <div data-role="content">
+                <!-- content영역안에서는 h1~h6까지 사이즈가 다름 -->
+                <h5>basic button</h5>
+                <!-- JQM에서 버튼을 만드는 3가지 Element -->
+                <!-- JQM에서의 버튼은 기본이 block요소임 -->
+                <a href="#" data-role="button">Anchor button</a>
+                <input type="button" value="Input Button">
+                <button style="background-color: aqua;">Button Element</button>
+                <!-- 어떤 방식을 쓰든 기본적으로는 상관없음. -->
+                <!-- 단, 가급적  a:page전환용  input: 입력form용   button:동작용 -->
+
+                <!-- 버튼 코너 모양 설정 : 기본 코너 라운드. -->
+                <hr>
+                <a href="#" data-role="button" data-corners="false">Corner false</a>
+
+                <!-- 버튼 아이콘 추가 -->
+                <hr>
+                <button data-icon="home">Icon Button</button>
+
+                <!-- 아이콘 위치 지정 -->
+                <button data-icon="home" data-iconpos="right">Icon Button</button>
+                <button data-icon="home" data-iconpos="top">Icon Button</button>
+                <button data-icon="home" data-iconpos="bottom">Icon Button</button>
+                <button data-icon="home" data-iconpos="notext">Only Icon Button</button>
+
+                <!-- 한줄에 버튼 여러개 : inline버튼 -->
+                <hr>
+                <button data-inline="true">button1</button>
+                <button data-inline="true">button2</button>
+                <button data-inline="true">button3</button>
+
+                <!-- 이미지 버튼 -->
+                <hr>
+                <h5>image button</h5>
+                <a href="#"><img src="images/thumb_moana.png" alt="moana"></a>
+                <input type="image" src="./images/thumb_moana.png">
+                <button><img src="./images/thumb_moana.png" alt=""></button>
+                <!-- a요소와 input중 type="image"는 인라인요소 -->
+                <!-- button은 block요소임 -->
+
+                <!-- button themem -->
+                <!-- 원래는 a~e까지 5개가 있었으나 현재는 a,b만 존재 -->
+                <!-- a: 회색배경에 검은색글씨 : 밝은 배경테마-->
+                <!-- b: 검정배경에 하얀색글씨 : 어두운 배경테마-->                
+                <hr>
+                <button data-theme="a">theme "a"</button>
+                <button data-theme="b">theme "b"</button>
+
+                <!-- disabled 버튼 -->
+                <hr>
+                <a href="#" data-role="button" class="ui-state-disabled">disabled anchor button</a>
+                <button disabled>button</button>
+
+                <!-- Button click Event -->
+                <hr>
+                <button onclick="clickBtn()">Button Element</button>
+                <input type="button" onclick="clickBtn2('hello')" value="input element">
+                <!-- a요소의 링크로 자바스크립트의 함수를 실행할 수도 있음. -->
+                <a href="javascript:clickBtn3(20)" data-role="button">anchor button</a>
+
+
+                <!-- 이벤트처리하기위해 html요소에 함수명을 기입하는 방식은 추후 JS코드 변경하면 일일이 찾아서 같이 변경해줘야하는 불편함이 있음. -->
+                <img src="./images/moana01.jpg" alt="moana01" id="img01">
+
+                <!-- jquery로 이벤트 처리 -->
+                <img src="./images/moana02.jpg" alt="moana02" id="img02">
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </body>
+</html>

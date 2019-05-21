@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <!-- JQM적용하기 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Radio Button</h2>
+            </div>
+
+            <div data-role="content">
+
+                <!-- 기본적은 Radio버튼은 그룹이어야 함. 택 1을 하기위한 것이므로 -->
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Choose a Pet : </legend>
+                        <label><input type="radio" name="rg_pet" checked>Cat</label>
+                        <label><input type="radio" name="rg_pet">Dog</label>
+                        <label><input type="radio" name="rg_pet">Hamster</label>
+                    </fieldset>
+                </div>
+
+                <!-- Horizontal Group -->
+                <div class="ui-field-contain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Choose a color : </legend>
+                        <label><input type="radio" name="rg_color" checked>RED</label>
+                        <label><input type="radio" name="rg_color">BLUE</label>
+                        <label><input type="radio" name="rg_color">GREEN</label>
+                    </fieldset>
+                </div>
+                                
+
+            </div>
+
+        </div>
+        
+    </body>
+</html>

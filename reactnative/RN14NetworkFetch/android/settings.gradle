@@ -1,0 +1,3 @@
+rootProject.name = 'RN14NetworkFetch'
+
+include ':app'

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 외부링크방식으로 열경우(rel="external")에는 반드시 JQM적용 코드가 별도로 있어야함. -->
+        <link rel="stylesheet" href="./jquery.mobile-1.4.5.min.css">
+        <script src="./jquery.min.js"></script>
+        <script src="./jquery.mobile-1.4.5.min.js"></script>
+    
+            <!-- 뷰포트 설정 [하이브리드에서는 필수]-->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ajax기술이 이 문서를 열경우.. -->
+        <!-- body요소 안에 page내용만 로드해감 -->
+        <!-- 그러므로.. -->
+        <!-- 이 head에 작성한 css가 적용되지 않을 수 있음. -->
+        <style>
+            p{color: blue;}
+        </style>
+    </head>
+    <body>
+        <div data-role="page" id="page3">
+            <div data-role="header">
+                <h2>Page3 Header</h2>
+                <a href="#" data-icon="back" data-rel="back">back</a>
+            </div>
+
+            <article data-role="content">
+                <p>This is page3</p>
+                <a href="#" data-role="button">asdfa</a>
+            </article>
+        </div>
+    </body>
+</html>

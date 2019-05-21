@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Jquery Mobile Library추가 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+
+        <!-- 스타일 -->
+        <style>
+            /* data-role="footer"선택시에는 .ui-footer라는 클래스선택자이용해야 함 */
+            .ui-footer{
+                padding: 16px;
+                text-align: center;
+                font-size: 10px;
+                color: gray;
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <div data-role="page">  
+            
+            <div data-role="header">
+                <h2>Header</h2>
+            </div>
+
+            <div data-role="content">
+                <h3>This region is content area.</h3>
+                <a href="" data-role="button">button</a>
+            </div>
+
+            <!-- <div data-role="footer" data-position="fixed" data-theme="b"> -->
+                <!-- header영역처럼 h1~h6까지 모두 같은 크기 -->
+                <!-- <h6>footer</h6> -->
+                <!-- header처럼 버튼을 넣으면 인라인요소로 배치됨. 단, header처럼 아이콘버튼같은 개념은 없음 -->
+                <!-- 즉, 차례대로 배치됨 -->
+                <!-- <a href="">one</a>
+                <a href="">two</a>
+                <a href="">three</a> -->
+            <!-- </div> -->
+
+            <!-- 커스텀 footer widet -->
+            <div data-role="footer" data-theme="b" data-position="fixed">
+
+                <a href="" style="color:gray">로그인</a>
+                <a href="" style="color:gray">전체서비스</a>
+                <a href="" style="color:gray">PC버전</a>
+
+                <p>
+                    <a href="" style="color:gray">이용약관</a> | 
+                    <a href="" style="color:gray">개인정보처리방침</a> | 
+                    <a href="" style="color:gray">검색광고</a>
+                </p>
+
+                <h5>&copy;NAVER corp. | 네이버 고객센터</h5>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

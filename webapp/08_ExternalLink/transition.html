@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용하기 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Transition Test</h2>
+            </div>
+
+            <div data-role="content"> 
+                <!-- 페이지전환 효과 -->
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#page2" data-transition="fade">fade</a></li>
+                    <li><a href="#page2" data-transition="pop">pop</a></li>
+                    <li><a href="page3.html" data-transition="flip">flip</a></li>
+                    <!-- ajax가 불가능함.. 다른 문서의 다른 page를 호출할 때는 -->
+                    <!-- ajax가 불가능함... ajax안쓰면 transition불가능함.-->
+                    <li><a href="page3.html#page4" data-ajax="false" data-transition="turn">turn</a></li>
+                    <li><a href="#page2" data-transition="flow">flow</a></li>
+                    <li><a href="#page2" data-transition="slidefade">slidefade</a></li>
+                    <li><a href="#page2" data-transition="slide">slide</a></li>
+                    <li><a href="#page2" data-transition="slideup">slideup</a></li>
+                    <li><a href="#page2" data-transition="slidedown">slidedown</a></li>
+                    <li><a href="#page2" data-transition="none">none</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- page1 -->
+
+
+        <!-- page2 -->
+        <div data-role="page" id="page2">
+            <div data-role="header" data-theme="b">
+                <a href="" data-rel="back" data-icon="back">back</a>
+                <h2>Page 2</h2>
+            </div>
+
+            <div data-role="content">
+                <p>this is page2.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>        
+
+        <!-- 스크립트 작성 -->
+        <script>
+            // $(document).ready(function(){
+
+            // });
+            //ready 축약형 표기법     
+            $( function(){
+                //header,footer를 toolbar로 적용!
+                $('[data-role="header"], [data-role="footer"]').toolbar();
+                //alert();
+            } );
+
+            // page가 바뀔어 보여질때 뭔가 원하는 작업을 수행하고 싶다면.
+            // 예) header에 써있는 제목글씨를 변경!!
+            $(document).on('pageshow','#page1',function(){
+                //헤더의 글씨 변경
+                $('#h_title').text("PAGE #1");
+            });
+
+            $(document).on('pageshow','#page2',function(){
+                //헤더의 글씨 변경
+                $('#h_title').text("PAGE #2");
+            });
+
+            
+        </script>
+        
+    </head>
+
+    <body>
+        
+        <!-- 페이지마다 header, footer를 만드는방식이 비효율적임 -->
+        <!-- 그래서 page밖에 header,footer를 만들기 -->
+        <!-- 페이지 밖에 header와 footer를 만들었기에 당연히 기본적으로는 보이지 않음. -->
+        <!-- 이를 보이게 하려면 JS or Jquery를 사용해야함 -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h2 id="h_title">Header</h2>
+        </div>
+
+        <div data-role="page" id="page1">
+            <div data-role="content">
+                <h3>Content #1</h3>
+                <a href="#page2" data-role="button">Go page2</a>
+            </div>
+        </div>
+
+        <div data-role="page" id="page2">
+            <div data-role="content">
+                <h3>Content #2</h3>
+                <a href="#page1" data-role="button">Go page1</a>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" data-icon="star" data-transition="slide" data-direction="reverse">page1</a></li>
+                    <li><a href="#page2" data-icon="user" data-transition="slide">page2</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </body>
+</html>

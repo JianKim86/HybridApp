@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQM적용 -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>        
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    <body>
+
+        <div data-role="page">
+            <div data-role="header">
+                <h2>Popup Widget</h2>
+            </div>
+
+            <div data-role="content">
+                <!-- 기본 popup -->
+                <a href="#pop1" data-rel="popup" data-role="button">Tooltip</a>
+                <!-- popup 마크업 -->
+                <div data-role="popup" id="pop1">
+                    <p>this is popop</p>
+                </div>
+
+                <!-- 메뉴팝업 -->
+                <a href="#pop2" data-rel="popup" data-role="button">Menu</a>
+                <!-- popup 마크업 -->
+                <div data-role="popup" id="pop2">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-role="list-divider">Popup Menu</li>
+                        <li><a href="">Option</a></li>
+                        <li><a href="">Methed</a></li>
+                        <li><a href="">Event</a></li>
+                    </ul>
+                </div>
+
+                <!-- 이미지 popup -->
+                <a href="#pop3" data-rel="popup" data-role="button">photo</a>
+                <!-- popup 마크업 -->
+                <div data-role="popup" id="pop3">
+                    <!-- 팝업종료 X버튼 -->
+                    <a href="" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right" data-rel="back" data-theme="b">close</a>
+                    <img src="./images/moana01.jpg" width="100%">
+                </div>
+
+                <!-- 배경이 투병한 이미지 popup -->
+                <a href="#pop4" data-rel="popup" data-role="button">photo</a>
+                <!-- popup 마크업 -->
+                <div data-role="popup" id="pop4" data-theme="none" data-shadow="false">
+                    <!-- 팝업종료 X버튼 -->
+                    <a href="" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right" data-rel="back" data-theme="b">close</a>
+                    <img src="./images/enemy_a_03.png" width="100%">
+                </div>
+
+                <!-- form요소 popup -->
+                <a href="#pop5" data-rel="popup" data-role="button">Sign in</a>
+                <!-- popup 마크업 -->
+                <div data-role="popup" id="pop5" style="padding:16px;">
+                    <form action="login.php">
+                        <h4>Please sing in</h4>
+                        <input type="text" name="name" placeholder="user name">
+                        <input type="password" name="pw" placeholder="password">
+                        <a href="" data-rel="back" data-role="button" data-icon="check" data-theme="b">Sign in</a>
+                    </form>
+                </div>
+
+                <!-- 팝업 다이얼로그 모양 -->
+                <a href="#pop6" data-rel="popup" data-role="button">Dialog</a>
+                <!-- popup 마크업 -->
+                <div data-role="popup" id="pop6" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+                    <div data-role="header" data-theme="a">
+                        <h2>Popup Dialog</h2>
+                    </div>
+                    <div data-role="content">
+                        <h4>Are you sure exit?</h4>
+                        <p>asjdflkjaslkdfjlaksdjflaksjdflasdfasdfasdfa asdfasdfasdf</p>
+
+                        <a href="" data-role="button" data-rel="back" data-inline="true">OK</a>
+                        <a href="" data-role="button" data-rel="back" data-inline="true"">CANCEL</a>
+                    </div>                    
+                </div>
+
+                <!-- 팝업 전환효과 -->
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="pop">pop</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="fade">fade</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="flip">flip</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="flow">flow</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="turn">turn</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="slide">slide</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="slidefade">slidefade</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="slideup">slideup</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="slidedown">slidedown</a>
+                    <a href="#pop7" data-rel="popup" data-role="button" data-transition="none">no transition</a>
+                </fieldset>
+
+                <div data-role="popup" id="pop7">
+                    <p>simple popup</p>
+                </div>
+
+            </div>
+        </div>
+        
+    </body>
+</html>
